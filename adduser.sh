@@ -42,14 +42,13 @@ clear
 	echo "4)Finance"
 	read -p "Select an option [1-4]:" option
 	
-	if [$option = 1]; then $group="HR"
-	elif [$option = 2]; then $group="Engineering"
-	elif [$option = 3]; then $group="IT"
-	elif [$option = 4]; then $group="Finance"
+	if [ $option = 1 ]; then $group = "HR"
+	elif [ $option = 2 ]; then $group = "Engineering"
+	elif [ $option = 3 ]; then $group = "IT"
+	elif [ $option = 4 ]; then $group = "Finance"
 	else
 	echo "Please select from the list!"
 	fi
 done
 
 useradd -G $group $username
-
